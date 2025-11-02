@@ -1,0 +1,17 @@
+{
+  "name": "course-rating-service",
+  "version": "1.0.0",
+  "description": "BEL 16 practice framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "JC",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
