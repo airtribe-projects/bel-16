@@ -1,6 +1,8 @@
 const usersModel = require("../models/usersModel");
 const bcrypt = require('bcrypt');
 const SALT_ROUND = 5;
+const jwt = require('jsonwebtoken');
+
 
 const loginUser = async (email, password) => {
     const filterCriteria = {
@@ -21,7 +23,9 @@ const loginUser = async (email, password) => {
         throw new Error("Username / password not valid");
     }
 
-    return dbUser.id;
+    const token = jwt.sign({username: dbUser.email, role:dbUser.role}, process.env.JWT_SECRET, {expiresIn: '1h'});
+
+    return token;
 }
 
 const registerUser = async (user) => {
