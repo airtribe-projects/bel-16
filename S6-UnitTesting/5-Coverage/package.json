@@ -19,6 +19,24 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "mongodb-memory-server": "^10.4.1",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "supertest": "^7.1.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text", 
+      "html", 
+      "lcov"
+    ], 
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 85,
+        "statements": 85
+      } 
+    }
   }
 }
