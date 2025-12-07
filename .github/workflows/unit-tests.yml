@@ -20,11 +20,11 @@ jobs:
         node-version: '18.x'
     
     - name: Navigate to target directory
-      run: cd ./S6-UnitTesting
+      run: cd ./S6-UnitTesting/5-Coverage
 
         
     - name: Install dependencies
-      working-directory: ./S6-UnitTesting
+      working-directory: ./S6-UnitTesting/5-Coverage
       run: |
         if [ -f package-lock.json ]; then
           npm ci
@@ -34,7 +34,7 @@ jobs:
       
     - name: Run tests
       id: test
-      working-directory: ./S6-UnitTesting
+      working-directory: ./S6-UnitTesting/5-Coverage
       run: |
         echo "test_output<<EOF" >> $GITHUB_OUTPUT
         npm run test 2>&1 | tee test_output.log
@@ -48,7 +48,7 @@ jobs:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           const fs = require('fs');
-          const testOutput = fs.readFileSync('./S6-UnitTesting/test_output.log', 'utf8');
+          const testOutput = fs.readFileSync('./S6-UnitTesting/5-Coverage/test_output.log', 'utf8');
           
           const comment = `## Test Results
 
