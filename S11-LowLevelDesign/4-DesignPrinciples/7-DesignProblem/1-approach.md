@@ -15,8 +15,10 @@
         - Scalable
         - Low Coupling
 2. Identifying Major Entities of the system (5 mintutes)
+   - Identify the nouns of the system
    - Generally 10- 15 entities 
    - Correlate it with the requirements, whether everything is met or not
+   - Think through the major flows of the system
 
 3. Detail Design of the System (30 minutes)
     - Go entity by entity

@@ -13,8 +13,8 @@
         - Low Coupling
 
 
-Requirements:
-- Parking on Land
+#### Requirements:
+- Parking on Land: Yes
 - Support parking of 2W as well as 4W
 - How many entrance and exits? 1 entry and 1 exit
     - This is generally and extension problem
@@ -40,3 +40,12 @@ Requirements:
 - Do we support different parking spot types: yes
 - Valet: No
 - Capture Entry and Exit Times: yes
+- Inappropriately parked vehicle: No need
+- Where should I pay? 
+    - Pay at entry and track time at exit
+    - Pay at exit: Let's go with this
+    - Client specific
+    - Pay a fixed amount for a specific duration and then pay additional amount if parked for more than the paid durartion: No
+- Should we support complians / suggestions: No
+- Passes are attached to vehicle: Yes
+- Ticket should be generated when the vehicle enters the lot
